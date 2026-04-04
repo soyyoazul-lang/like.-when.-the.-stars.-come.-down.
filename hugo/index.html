@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¿Cómo nos conocimos? 💕</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;700&family=Quicksand:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #fff6f2;
+            --card: rgba(255, 255, 255, 0.72);
+            --text: #52233a;
+            --muted: #8b5e73;
+            --accent-deep: #b63f69;
+            --shadow: 0 24px 60px rgba(142, 67, 94, 0.16);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            font-family: "Quicksand", sans-serif;
+            color: var(--text);
+            background:
+                radial-gradient(circle at top, rgba(255, 255, 255, 0.9), transparent 35%),
+                linear-gradient(180deg, #ffd8dc 0%, var(--bg) 45%, #fff9f5 100%);
+            overflow-x: hidden;
+        }
+
+        .background-hearts {
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            background-image:
+                radial-gradient(circle at 10% 20%, rgba(222, 93, 131, 0.15) 0 18px, transparent 19px),
+                radial-gradient(circle at 85% 15%, rgba(255, 173, 186, 0.18) 0 24px, transparent 25px),
+                radial-gradient(circle at 20% 80%, rgba(255, 198, 207, 0.2) 0 22px, transparent 23px),
+                radial-gradient(circle at 75% 78%, rgba(222, 93, 131, 0.12) 0 20px, transparent 21px);
+            filter: blur(8px);
+        }
+
+        .star-collage {
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            z-index: 0;
+            overflow: hidden;
+        }
+
+        .star-photo {
+            position: absolute;
+            background-size: cover;
+            background-position: center;
+            clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 92%, 50% 70%, 21% 92%, 32% 57%, 2% 35%, 39% 35%);
+            opacity: 0.34;
+            filter: saturate(1.05) contrast(1.02);
+            box-shadow: 0 10px 30px rgba(102, 40, 64, 0.12);
+        }
+
+        .star-1 {
+            width: 260px;
+            height: 260px;
+            top: 4%;
+            left: -2%;
+            transform: rotate(-8deg);
+            background-image: url("imagenes/foto-real-1.jpeg");
+        }
+
+        .star-2 {
+            width: 320px;
+            height: 320px;
+            top: 8%;
+            right: -3%;
+            transform: rotate(11deg);
+            background-image: url("imagenes/foto-real-2.jpeg");
+        }
+
+        .star-3 {
+            width: 220px;
+            height: 220px;
+            top: 30%;
+            left: 8%;
+            transform: rotate(-14deg);
+            background-image: url("imagenes/foto-real-3.jpeg");
+        }
+
+        .star-4 {
+            width: 360px;
+            height: 360px;
+            top: 33%;
+            right: 6%;
+            transform: rotate(7deg);
+            background-image: url("imagenes/foto-real-4.jpeg");
+        }
+
+        .star-5 {
+            width: 280px;
+            height: 280px;
+            top: 54%;
+            left: 28%;
+            transform: rotate(-9deg);
+            background-image: url("imagenes/foto-real-2.jpeg");
+        }
+
+        .star-6 {
+            width: 240px;
+            height: 240px;
+            top: 69%;
+            left: -1%;
+            transform: rotate(12deg);
+            background-image: url("imagenes/foto-real-4.jpeg");
+        }
+
+        .star-7 {
+            width: 320px;
+            height: 320px;
+            top: 74%;
+            right: 14%;
+            transform: rotate(-10deg);
+            background-image: url("imagenes/foto-real-1.jpeg");
+        }
+
+        .star-8 {
+            width: 220px;
+            height: 220px;
+            top: 82%;
+            right: -2%;
+            transform: rotate(10deg);
+            background-image: url("imagenes/foto-real-3.jpeg");
+        }
+
+        .hero,
+        .timeline,
+        .closing,
+        .footer {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero {
+            max-width: 920px;
+            margin: 0 auto;
+            padding: 96px 24px 40px;
+            text-align: center;
+        }
+
+        .hero-sticker {
+            width: 110px;
+            height: 110px;
+            margin: 0 auto 14px;
+            display: block;
+            filter: drop-shadow(0 10px 18px rgba(182, 63, 105, 0.18));
+        }
+
+        .hero h1 {
+            margin: 0 auto 20px;
+            max-width: 900px;
+            font-family: "Cormorant Garamond", serif;
+            font-size: clamp(3rem, 6vw, 5.4rem);
+            line-height: 0.94;
+            font-weight: 700;
+            color: var(--accent-deep);
+        }
+
+        .hero-subtitle {
+            max-width: 760px;
+            margin: 0 auto 18px;
+            font-family: "Cormorant Garamond", serif;
+            font-size: clamp(1.55rem, 2.6vw, 2.45rem);
+            line-height: 1.16;
+            font-weight: 600;
+        }
+
+        .intro {
+            max-width: 700px;
+            margin: 0 auto;
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: var(--muted);
+        }
+
+        .timeline {
+            width: min(100%, 980px);
+            margin: 0 auto;
+            padding: 24px;
+            display: grid;
+            gap: 22px;
+        }
+
+        .post {
+            background: var(--card);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.72);
+            border-radius: 28px;
+            padding: 28px;
+            box-shadow: var(--shadow);
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+
+        .post:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 28px 70px rgba(142, 67, 94, 0.2);
+        }
+
+        .date {
+            display: inline-block;
+            margin-bottom: 12px;
+            padding: 7px 12px;
+            border-radius: 999px;
+            background: rgba(222, 93, 131, 0.12);
+            color: var(--accent-deep);
+            font-size: 0.88rem;
+            font-weight: 700;
+            letter-spacing: 0.04em;
+        }
+
+        .post h2 {
+            margin: 0 0 10px;
+            font-family: "Cormorant Garamond", serif;
+            font-size: clamp(2rem, 3vw, 2.6rem);
+            font-weight: 700;
+        }
+
+        .post p {
+            margin: 0;
+            line-height: 1.9;
+            color: var(--text);
+            font-size: 1rem;
+        }
+
+        .closing {
+            max-width: 820px;
+            margin: 8px auto 0;
+            padding: 34px 24px 18px;
+            text-align: center;
+        }
+
+        .footer {
+            padding: 8px 24px 48px;
+            text-align: center;
+            color: var(--muted);
+            font-size: 0.95rem;
+        }
+
+        @media (max-width: 640px) {
+            .hero {
+                padding-top: 72px;
+            }
+
+            .hero-sticker {
+                width: 92px;
+                height: 92px;
+            }
+
+            .post {
+                padding: 22px;
+                border-radius: 22px;
+            }
+
+            .star-photo {
+                opacity: 0.24;
+            }
+
+            .star-1,
+            .star-6 {
+                width: 170px;
+                height: 170px;
+            }
+
+            .star-2,
+            .star-5,
+            .star-7 {
+                width: 210px;
+                height: 210px;
+            }
+
+            .star-3,
+            .star-8 {
+                width: 150px;
+                height: 150px;
+            }
+
+            .star-4 {
+                width: 240px;
+                height: 240px;
+            }
+
+            .post p,
+            .intro {
+                line-height: 1.7;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="background-hearts" aria-hidden="true"></div>
+    <div class="star-collage" aria-hidden="true">
+        <div class="star-photo star-1"></div>
+        <div class="star-photo star-2"></div>
+        <div class="star-photo star-3"></div>
+        <div class="star-photo star-4"></div>
+        <div class="star-photo star-5"></div>
+        <div class="star-photo star-6"></div>
+        <div class="star-photo star-7"></div>
+        <div class="star-photo star-8"></div>
+    </div>
+
+    <header class="hero">
+        <svg class="hero-sticker" viewBox="0 0 120 120" aria-hidden="true">
+            <g transform="rotate(-10 60 60)">
+                <ellipse cx="34" cy="78" rx="14" ry="22" fill="#75a85b"/>
+                <ellipse cx="51" cy="88" rx="12" ry="19" fill="#8bbd6d"/>
+                <rect x="57" y="30" width="6" height="62" rx="3" fill="#4f8a42"/>
+                <path d="M60 30c-8-18-30-16-35 0 0 17 17 24 35 39 18-15 35-22 35-39-5-16-27-18-35 0z" fill="#f06f97"/>
+                <path d="M60 36c-6-12-20-11-24 0 0 11 11 17 24 29 13-12 24-18 24-29-4-11-18-12-24 0z" fill="#ff9bbb"/>
+            </g>
+        </svg>
+        <h1>¿Como nos amamos?</h1>
+        <p class="hero-subtitle">Hace un año me pediste que fuera tu novia. Me sacaste del salón y me lo preguntaste, y fue una de las experiencias más bonitas que he vivido.</p>
+        <p class="intro">Fueron meses intentando enamorarte, y gracias a Dios dio frutos. Hoy seguimos juntos, agarrados de la mano, construyendo algo precioso.</p>
+    </header>
+
+    <main class="timeline">
+        <article class="post">
+            <span class="date">21/08/24</span>
+            <h2>Cómo empezó todo</h2>
+            <p>
+                Aún tenía 14 años cuando te vi por primera vez. Me gustó tu forma de ser y también tu físico. Fue extraño, porque según yo era imposible encontrar a alguien así, con todo lo que me gustaba. No sabía que llegaría a enamorarme tanto de ti como lo estoy ahora.
+            </p>
+        </article>
+
+        <article class="post">
+            <span class="date">14/02/25</span>
+            <h2>14 de febrero</h2>
+            <p>
+                Convencida y atormentada, te di flores, algo que normalmente no me gusta hacer y para lo que no tenía valor. Eran tulipanes, mis favoritos, esperando que también te gustaran. Fue la primera vez que hablamos bien y la primera vez que te peiné.
+            </p>
+        </article>
+
+        <article class="post">
+            <span class="date">13/05/25 · 12:15</span>
+            <h2>El día que empezamos</h2>
+            <p>
+                El 13 de mayo de 2025, a las 12:15, me pediste que fuera tu novia. Ese día sentí una felicidad inmensa y le presumí a todos que ya éramos nosotros.
+            </p>
+        </article>
+    </main>
+
+    <section class="closing">
+        <h2 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 4vw, 3rem); color: var(--accent-deep);">Feliz primer año juntos. 💕</h2>
+    </section>
+
+    <footer class="footer">
+    </footer>
+</body>
+</html>
