@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desarrollo | Nuestra historia</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root { --pink-1:#fff4f8; --pink-2:#ffe3ee; --pink-3:#ffcadd; --pink-4:#f6a9c1; --pink-5:#e77fa5; --text:#7b4a63; --muted:#9a6b81; --card:rgba(255,250,252,.9); --line:rgba(231,127,165,.2); --shadow:0 18px 40px rgba(231,127,165,.15); }
+        * { box-sizing:border-box; }
+        body { margin:0; font-family:"Nunito",sans-serif; color:var(--text); background:radial-gradient(circle at top right, rgba(255,186,214,.42), transparent 28%), linear-gradient(180deg,#fff2f8 0%,#ffdcea 100%); }
+        .star-collage { position:fixed; inset:0; z-index:0; pointer-events:none; overflow:hidden; }
+        .star-photo { position:absolute; background-size:cover; background-position:center; clip-path:polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 92%, 50% 70%, 21% 92%, 32% 57%, 2% 35%, 39% 35%); opacity:.22; filter:saturate(1.05) brightness(1.04); }
+        .star-1 { width:220px; height:220px; top:6%; left:-2%; transform:rotate(-8deg); background-image:url("foto-real-1.jpeg"); }
+        .star-2 { width:280px; height:280px; top:16%; right:-3%; transform:rotate(8deg); background-image:url("foto-real-2.jpeg"); }
+        .star-3 { width:230px; height:230px; top:70%; right:8%; transform:rotate(-8deg); background-image:url("foto-real-3.jpeg"); }
+        body::before { content:"🌷 🌷 🌷"; position:fixed; top:18px; right:18px; opacity:.12; font-size:2.4rem; pointer-events:none; }
+        .page { width:min(1100px,calc(100% - 28px)); margin:0 auto; padding:24px 0 52px; position:relative; z-index:1; }
+        .topbar,.hero,.note,.gallery { background:var(--card); border:2px solid var(--line); box-shadow:var(--shadow); }
+        .topbar { border-radius:999px; padding:14px 18px; display:flex; justify-content:space-between; align-items:center; gap:16px; margin-bottom:22px; }
+        .nav { display:flex; flex-wrap:wrap; gap:10px; }
+        .nav a,.button { text-decoration:none; color:var(--text); background:#fff8fb; border:2px solid var(--line); padding:10px 14px; border-radius:999px; font-weight:800; }
+        .hero { border-radius:34px; padding:24px; display:grid; grid-template-columns:1fr 1fr; gap:18px; margin-bottom:22px; }
+        h1,h2 { margin:0; font-family:"Cherry Bomb One",system-ui; font-weight:400; color:#d05f8f; }
+        h1 { font-size:clamp(2.6rem,6vw,4.6rem); line-height:1.02; margin:16px 0; }
+        h2 { font-size:clamp(1.8rem,4vw,2.9rem); }
+        p { color:var(--muted); line-height:1.8; }
+        .badge { display:inline-block; padding:8px 14px; border-radius:999px; background:rgba(246,169,193,.18); font-weight:800; font-size:.84rem; }
+        .hero figure,.shot { margin:0; border-radius:26px; overflow:hidden; }
+        img { width:100%; height:100%; object-fit:cover; display:block; }
+        .notes { display:grid; gap:16px; margin-bottom:22px; }
+        .note { border-radius:28px; padding:22px; }
+        .edit { display:inline-block; margin-bottom:10px; padding:6px 12px; border-radius:999px; background:rgba(255,202,221,.28); font-size:.82rem; font-weight:800; }
+        .gallery { border-radius:30px; padding:16px; display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-bottom:22px; }
+        .shot { min-height:250px; position:relative; }
+        .shot span { position:absolute; left:10px; right:10px; bottom:10px; background:rgba(255,248,251,.92); border-radius:18px; padding:10px 12px; font-weight:800; font-size:.9rem; }
+        .actions { display:flex; flex-wrap:wrap; gap:10px; }
+        .button.primary { background:linear-gradient(180deg,#f5a6c6 0%,#e77fa5 100%); color:white; border-color:transparent; }
+        @media (max-width:860px) { .hero,.gallery { grid-template-columns:1fr; } }
+        @media (max-width:640px) { .topbar { display:block; border-radius:28px; } .nav { margin-top:12px; } }
+    </style>
+</head>
+<body>
+    <div class="star-collage" aria-hidden="true"><div class="star-photo star-1"></div><div class="star-photo star-2"></div><div class="star-photo star-3"></div></div>
+    <div class="page">
+        <header class="topbar">
+            <strong>Desarrollo 🌷</strong>
+            <nav class="nav">
+                <a href="index.html">Introduccion</a>
+                <a href="desarrollo.html">Desarrollo</a>
+                <a href="fase-2.html">Fase 2</a>
+                <a href="fase-3.html">Fase 3</a>
+                <a href="fase-4.html">Fase 4</a>
+                <a href="fase-5.html">Fase 5</a>
+            </nav>
+        </header>
+
+        <main>
+            <section class="hero">
+                <div>
+                    <span class="badge">Pagina 2</span>
+                    <h1>Desarrollo de como fue naciendo lo nuestro.</h1>
+                    <p>Aqui va la etapa en la que todo se fue moviendo poquito a poquito: mas cercania, mas confianza, mas coincidencias y mas señales de que lo nuestro ya se estaba formando.</p>
+                    <p>Te deje apartados para editar facilmente y poner tus recuerdos con tus propias palabras.</p>
+                </div>
+                <figure>
+                    <img src="imagenes/star-08.jpeg" alt="Selfie de ustedes dos juntos">
+                </figure>
+            </section>
+
+            <section class="notes">
+                <article class="note">
+                    <span class="edit">Apartado editable 1</span>
+                    <h2>Como empece a fijarme en ti</h2>
+                    <p>[Escribe aqui como fueron esas primeras impresiones, lo que te gustaba de su forma de ser y como empezo a llamarte la atencion.]</p>
+                </article>
+                <article class="note">
+                    <span class="edit">Apartado editable 2</span>
+                    <h2>Los momentos que nos fueron acercando</h2>
+                    <p>[Escribe aqui las convivencias, conversaciones, gestos o detalles que hicieron que se fueran acercando cada vez mas.]</p>
+                </article>
+                <article class="note">
+                    <span class="edit">Apartado editable 3</span>
+                    <h2>Cuando senti que esto podia ser algo muy bonito</h2>
+                    <p>[Escribe aqui ese momento en el que sentiste que ya no era cualquier cosa y que habia algo especial entre ustedes.]</p>
+                </article>
+            </section>
+
+            <section class="gallery">
+                <figure class="shot">
+                    <img src="imagenes/featured-repeat.jpeg" alt="Ustedes juntos en una banca">
+                    <span>Una foto que se siente como inicio tierno.</span>
+                </figure>
+                <figure class="shot">
+                    <img src="imagenes/star-09.jpeg" alt="Foto divertida de ustedes">
+                    <span>Otra foto para recordar como tambien se divertian juntos.</span>
+                </figure>
+            </section>
+
+            <div class="actions">
+                <a class="button" href="index.html">Volver a introduccion</a>
+                <a class="button primary" href="fase-2.html">Seguir a fase 2</a>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

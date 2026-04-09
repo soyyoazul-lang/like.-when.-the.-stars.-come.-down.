@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fase 3 | Mejores momentos juntos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root { --pink-1:#fff4f8; --pink-2:#ffe3ee; --pink-3:#ffcadd; --pink-4:#f6a9c1; --pink-5:#e77fa5; --text:#7b4a63; --muted:#9a6b81; --card:rgba(255,250,252,.92); --line:rgba(231,127,165,.2); --shadow:0 18px 40px rgba(231,127,165,.15); }
+        * { box-sizing:border-box; }
+        body { margin:0; font-family:"Nunito",sans-serif; color:var(--text); background:radial-gradient(circle at top right, rgba(255,186,214,.42), transparent 28%), linear-gradient(180deg,#fff1f7 0%,#ffdbe9 100%); }
+        .star-collage { position:fixed; inset:0; z-index:0; pointer-events:none; overflow:hidden; }
+        .star-photo { position:absolute; background-size:cover; background-position:center; clip-path:polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 92%, 50% 70%, 21% 92%, 32% 57%, 2% 35%, 39% 35%); opacity:.22; filter:saturate(1.05) brightness(1.04); }
+        .star-1 { width:220px; height:220px; top:8%; left:-2%; transform:rotate(-7deg); background-image:url("foto-real-2.jpeg"); }
+        .star-2 { width:260px; height:260px; top:20%; right:-3%; transform:rotate(7deg); background-image:url("foto-real-3.jpeg"); }
+        .star-3 { width:230px; height:230px; top:76%; right:8%; transform:rotate(-9deg); background-image:url("foto-real-4.jpeg"); }
+        body::before { content:"🌷💗🌷"; position:fixed; right:18px; top:18px; opacity:.12; font-size:2.4rem; pointer-events:none; }
+        .page { width:min(1140px,calc(100% - 28px)); margin:0 auto; padding:24px 0 52px; position:relative; z-index:1; }
+        .topbar,.hero,.memory-card,.closing { background:var(--card); border:2px solid var(--line); box-shadow:var(--shadow); }
+        .topbar { border-radius:999px; padding:14px 18px; display:flex; justify-content:space-between; align-items:center; gap:16px; margin-bottom:22px; }
+        .nav { display:flex; flex-wrap:wrap; gap:10px; }
+        .nav a,.button { text-decoration:none; color:var(--text); background:#fff8fb; border:2px solid var(--line); padding:10px 14px; border-radius:999px; font-weight:800; }
+        .hero { border-radius:34px; padding:24px; margin-bottom:22px; }
+        h1,h2 { margin:0; font-family:"Cherry Bomb One",system-ui; font-weight:400; color:#d05f8f; }
+        h1 { font-size:clamp(2.6rem,6vw,4.6rem); line-height:1.02; margin:16px 0; }
+        h2 { font-size:1.55rem; line-height:1.05; }
+        p { color:var(--muted); line-height:1.8; }
+        .badge { display:inline-block; padding:8px 14px; border-radius:999px; background:rgba(246,169,193,.18); font-weight:800; font-size:.84rem; }
+        .memory-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:18px; margin-bottom:22px; }
+        .memory-card { border-radius:30px; overflow:hidden; }
+        .memory-card img { width:100%; height:340px; object-fit:contain; display:block; background:#fff7fb; padding:14px; }
+        .memory-copy { padding:20px 22px 24px; }
+        .edit { display:inline-block; margin-bottom:10px; padding:6px 12px; border-radius:999px; background:rgba(255,202,221,.28); font-size:.82rem; font-weight:800; }
+        .closing { border-radius:30px; padding:22px; margin-bottom:22px; text-align:center; }
+        .actions { display:flex; flex-wrap:wrap; gap:10px; }
+        .button.primary { background:linear-gradient(180deg,#f5a6c6 0%,#e77fa5 100%); color:white; border-color:transparent; }
+        @media (max-width:860px) { .memory-grid { grid-template-columns:1fr; } .memory-card img { height:300px; } }
+        @media (max-width:640px) { .topbar { display:block; border-radius:28px; } .nav { margin-top:12px; } .memory-card img { height:260px; } }
+    </style>
+</head>
+<body>
+    <div class="star-collage" aria-hidden="true"><div class="star-photo star-1"></div><div class="star-photo star-2"></div><div class="star-photo star-3"></div></div>
+    <div class="page">
+        <header class="topbar">
+            <strong>Fase 3 🌷</strong>
+            <nav class="nav">
+                <a href="index.html">Introduccion</a>
+                <a href="desarrollo.html">Desarrollo</a>
+                <a href="fase-2.html">Fase 2</a>
+                <a href="fase-3.html">Fase 3</a>
+                <a href="fase-4.html">Fase 4</a>
+                <a href="fase-5.html">Fase 5</a>
+            </nav>
+        </header>
+
+        <main>
+            <section class="hero">
+                <span class="badge">Mejores momentos juntos</span>
+                <h1>Una galeria cute de recuerdos que si se ve llena de nosotros.</h1>
+                <p>Ahora esta fase ya no tiene espacios vacios tipo plantilla. Aqui puse fotos reales dentro de la pagina para que se sienta como una coleccion de momentos bonitos, raritos, tiernos y muy de ustedes.</p>
+            </section>
+
+            <section class="memory-grid">
+                <article class="memory-card">
+                    <img src="imagenes/star-02.jpeg" alt="Foto cercana y divertida de ustedes dos">
+                    <div class="memory-copy">
+                        <span class="edit">Texto editable 1</span>
+                        <h2>Una foto que se siente muy nosotros</h2>
+                        <p>[Escribe aqui por que este momento te gusta tanto o que estaba pasando ese dia.]</p>
+                    </div>
+                </article>
+
+                <article class="memory-card">
+                    <img src="imagenes/star-03.jpeg" alt="Foto divertida de ustedes dos juntos">
+                    <div class="memory-copy">
+                        <span class="edit">Texto editable 2</span>
+                        <h2>Un recuerdo raro pero precioso</h2>
+                        <p>[Escribe aqui por que esta foto te da risa, ternura o se te quedo muy grabada.]</p>
+                    </div>
+                </article>
+
+                <article class="memory-card">
+                    <img src="imagenes/star-04.jpeg" alt="Foto divertida de ustedes haciendo caras">
+                    <div class="memory-copy">
+                        <span class="edit">Texto editable 3</span>
+                        <h2>Tambien amo cuando estamos asi de mensitos</h2>
+                        <p>[Escribe aqui una anecdota chistosa o una razon por la que amas estos momentos.]</p>
+                    </div>
+                </article>
+
+                <article class="memory-card">
+                    <img src="imagenes/star-05.jpeg" alt="Foto de ustedes en un momento gracioso">
+                    <div class="memory-copy">
+                        <span class="edit">Texto editable 4</span>
+                        <h2>Una escena que me hace sonreir siempre</h2>
+                        <p>[Escribe aqui lo que recuerdas cuando vuelves a ver esta foto.]</p>
+                    </div>
+                </article>
+
+                <article class="memory-card">
+                    <img src="imagenes/star-06.jpeg" alt="Foto de ustedes afuera en un momento divertido">
+                    <div class="memory-copy">
+                        <span class="edit">Texto editable 5</span>
+                        <h2>De esas fotos que se quedaron conmigo</h2>
+                        <p>[Escribe aqui por que este momento merece estar en los mejores recuerdos juntos.]</p>
+                    </div>
+                </article>
+
+                <article class="memory-card">
+                    <img src="imagenes/star-07.jpeg" alt="Foto tierna y divertida de ustedes">
+                    <div class="memory-copy">
+                        <span class="edit">Texto editable 6</span>
+                        <h2>Otro pedacito bonito de nosotros</h2>
+                        <p>[Escribe aqui cualquier detalle lindo, raro o cute que quieras guardar.]</p>
+                    </div>
+                </article>
+            </section>
+
+            <section class="closing">
+                <h2>Esta fase ya se ve como recuerdos de verdad.</h2>
+                <p>Si quieres, luego tambien puedo meter mas de las fotos nuevas en esta misma pagina y acomodarlas como collage o tipo polaroid.</p>
+            </section>
+
+            <div class="actions">
+                <a class="button" href="fase-2.html">Volver a fase 2</a>
+                <a class="button primary" href="fase-4.html">Seguir a fase 4</a>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

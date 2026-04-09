@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuestra historia | Introduccion</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --pink-1: #fff4f8;
+            --pink-2: #ffe3ee;
+            --pink-3: #ffcadd;
+            --pink-4: #f6a9c1;
+            --pink-5: #e77fa5;
+            --text: #7b4a63;
+            --muted: #9a6b81;
+            --card: rgba(255, 250, 252, 0.88);
+            --line: rgba(231, 127, 165, 0.2);
+            --shadow: 0 18px 40px rgba(231, 127, 165, 0.15);
+        }
+
+        * { box-sizing: border-box; }
+        body {
+            margin: 0;
+            min-height: 100vh;
+            font-family: "Nunito", sans-serif;
+            color: var(--text);
+            background:
+                radial-gradient(circle at top left, rgba(255, 255, 255, 0.95), transparent 24%),
+                radial-gradient(circle at top right, rgba(255, 186, 214, 0.52), transparent 30%),
+                radial-gradient(circle at bottom left, rgba(255, 205, 224, 0.35), transparent 26%),
+                linear-gradient(180deg, #fff2f8 0%, #ffdcea 48%, #fff1f7 100%);
+            overflow-x: hidden;
+        }
+
+        .star-collage {
+            position: fixed;
+            inset: 0;
+            z-index: 0;
+            pointer-events: none;
+            overflow: hidden;
+        }
+
+        .star-photo {
+            position: absolute;
+            background-size: cover;
+            background-position: center;
+            clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 92%, 50% 70%, 21% 92%, 32% 57%, 2% 35%, 39% 35%);
+            opacity: 0.25;
+            filter: saturate(1.05) brightness(1.04);
+            box-shadow: 0 10px 28px rgba(231, 127, 165, 0.14);
+        }
+
+        .star-1 { width: 240px; height: 240px; top: 5%; left: -2%; transform: rotate(-8deg); background-image: url("foto-real-1.jpeg"); }
+        .star-2 { width: 300px; height: 300px; top: 8%; right: -3%; transform: rotate(10deg); background-image: url("foto-real-2.jpeg"); }
+        .star-3 { width: 220px; height: 220px; top: 34%; left: 6%; transform: rotate(-12deg); background-image: url("foto-real-3.jpeg"); }
+        .star-4 { width: 330px; height: 330px; top: 38%; right: 7%; transform: rotate(7deg); background-image: url("foto-real-4.jpeg"); }
+        .star-5 { width: 260px; height: 260px; top: 70%; left: -2%; transform: rotate(9deg); background-image: url("foto-real-2.jpeg"); }
+        .star-6 { width: 310px; height: 310px; top: 74%; right: 10%; transform: rotate(-10deg); background-image: url("foto-real-1.jpeg"); }
+
+        body::before,
+        body::after {
+            content: "🌷";
+            position: fixed;
+            font-size: 4rem;
+            opacity: 0.12;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        body::before { top: 20px; left: 18px; }
+        body::after { right: 20px; bottom: 12px; }
+
+        .page {
+            width: min(1120px, calc(100% - 28px));
+            margin: 0 auto;
+            padding: 24px 0 52px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .topbar,
+        .hero,
+        .section,
+        .page-card,
+        .memory {
+            background: var(--card);
+            border: 2px solid var(--line);
+            box-shadow: var(--shadow);
+        }
+
+        .topbar {
+            border-radius: 999px;
+            padding: 14px 18px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 22px;
+        }
+
+        .brand {
+            font-weight: 800;
+            font-size: 0.9rem;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+        }
+
+        .nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .nav a,
+        .button {
+            text-decoration: none;
+            color: var(--text);
+            background: #fff8fb;
+            border: 2px solid var(--line);
+            padding: 10px 14px;
+            border-radius: 999px;
+            font-weight: 800;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .nav a:hover,
+        .button:hover,
+        .page-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 16px 30px rgba(231, 127, 165, 0.18);
+        }
+
+        .hero {
+            border-radius: 36px;
+            padding: 24px;
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 18px;
+            margin-bottom: 22px;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 8px 14px;
+            border-radius: 999px;
+            background: rgba(246, 169, 193, 0.18);
+            font-weight: 800;
+            font-size: 0.84rem;
+        }
+
+        h1, h2, h3 {
+            margin: 0;
+            color: #d05f8f;
+        }
+
+        h1, h2 {
+            font-family: "Cherry Bomb One", system-ui;
+            font-weight: 400;
+            letter-spacing: 0.01em;
+        }
+
+        h1 {
+            font-size: clamp(2.8rem, 6vw, 5rem);
+            line-height: 1;
+            margin: 16px 0;
+        }
+
+        h2 {
+            font-size: clamp(2rem, 4vw, 3.1rem);
+            line-height: 1.05;
+        }
+
+        p {
+            line-height: 1.8;
+            color: var(--muted);
+        }
+
+        .hero-photos {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+
+        .hero-photos figure,
+        .memory {
+            margin: 0;
+            border-radius: 26px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .hero-photos figure:first-child {
+            grid-column: span 2;
+            min-height: 250px;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .sticker {
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            background: rgba(255, 248, 251, 0.92);
+            border: 2px solid var(--line);
+            border-radius: 999px;
+            padding: 6px 10px;
+            font-size: 0.86rem;
+            font-weight: 800;
+        }
+
+        .actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 18px;
+        }
+
+        .button.primary {
+            background: linear-gradient(180deg, #f5a6c6 0%, #e77fa5 100%);
+            color: white;
+            border-color: transparent;
+        }
+
+        .section {
+            border-radius: 32px;
+            padding: 24px;
+            margin-bottom: 22px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 16px;
+        }
+
+        .page-card {
+            display: block;
+            text-decoration: none;
+            color: inherit;
+            border-radius: 28px;
+            padding: 22px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .page-card::after {
+            content: "🌷";
+            position: absolute;
+            right: 16px;
+            bottom: 12px;
+            font-size: 2rem;
+            opacity: 0.18;
+        }
+
+        .page-number {
+            display: inline-block;
+            padding: 6px 12px;
+            border-radius: 999px;
+            background: rgba(255, 202, 221, 0.28);
+            font-size: 0.82rem;
+            font-weight: 800;
+            margin-bottom: 10px;
+        }
+
+        .page-card h3 {
+            color: #cc6a94;
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+        }
+
+        .memory-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 14px;
+        }
+
+        .memory figcaption {
+            padding: 12px 14px 16px;
+            background: #fff8fb;
+            color: var(--muted);
+            line-height: 1.6;
+        }
+
+        @media (max-width: 900px) {
+            .hero,
+            .grid,
+            .memory-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-photos {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .star-1, .star-3, .star-5 { width: 180px; height: 180px; }
+            .star-2, .star-4, .star-6 { width: 220px; height: 220px; }
+        }
+
+        @media (max-width: 640px) {
+            .topbar { display: block; border-radius: 28px; }
+            .nav { margin-top: 12px; }
+            .hero-photos { grid-template-columns: 1fr; }
+            .hero-photos figure:first-child { grid-column: span 1; }
+        }
+    </style>
+</head>
+<body>
+    <div class="star-collage" aria-hidden="true">
+        <div class="star-photo star-1"></div>
+        <div class="star-photo star-2"></div>
+        <div class="star-photo star-3"></div>
+        <div class="star-photo star-4"></div>
+        <div class="star-photo star-5"></div>
+        <div class="star-photo star-6"></div>
+    </div>
+    <div class="page">
+        <header class="topbar">
+            <div class="brand">Nuestra fan page pastel 🌷</div>
+            <nav class="nav" aria-label="Navegacion principal">
+                <a href="index.html">Introduccion</a>
+                <a href="desarrollo.html">Desarrollo</a>
+                <a href="fase-2.html">Fase 2</a>
+                <a href="fase-3.html">Fase 3</a>
+                <a href="fase-4.html">Fase 4</a>
+                <a href="fase-5.html">Fase 5</a>
+            </nav>
+        </header>
+
+        <main>
+            <section class="hero">
+                <div>
+                    <span class="badge">Introduccion kawaii a nuestra historia</span>
+                    <h1>Nuestra historia contada por fases bonitas.</h1>
+                    <p>Ahora este sitio ya no es solo una pagina: es una fan page completa de nuestra relacion, con una tematica rosa pastel, detalles tiernos y tulipanes lindos para acompañar cada recuerdo.</p>
+                    <p>Desde aqui empieza todo: una introduccion a como fuimos mejorando poco a poco, acercandonos mas, queriendonos mas y construyendo algo precioso fase por fase.</p>
+                    <div class="actions">
+                        <a class="button primary" href="desarrollo.html">Ir al desarrollo</a>
+                        <a class="button" href="fase-4.html">Ver cosas que amo de ti</a>
+                    </div>
+                </div>
+
+                <div class="hero-photos">
+                    <figure>
+                        <img src="imagenes/featured-repeat.jpeg" alt="Ustedes sentados juntos en una banca">
+                        <div class="sticker">nuestro inicio</div>
+                    </figure>
+                    <figure>
+                        <img src="imagenes/star-02.jpeg" alt="Selfie de ustedes dos juntos">
+                    </figure>
+                    <figure>
+                        <img src="imagenes/star-04.jpeg" alt="Foto cercana de ustedes dos">
+                    </figure>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2>Mapa del sitio</h2>
+                <p>Estas son las 6 paginas de la historia para que puedas entrar a cada una, editarlas y seguir llenandolas con recuerdos, notas y momentos especiales.</p>
+                <div class="grid">
+                    <a class="page-card" href="index.html">
+                        <span class="page-number">Pagina 1</span>
+                        <h3>Introduccion</h3>
+                        <p>Portada principal con la idea general de toda la historia.</p>
+                    </a>
+                    <a class="page-card" href="desarrollo.html">
+                        <span class="page-number">Pagina 2</span>
+                        <h3>Desarrollo</h3>
+                        <p>Como se fue formando todo antes de ser oficialmente novios.</p>
+                    </a>
+                    <a class="page-card" href="fase-2.html">
+                        <span class="page-number">Pagina 3</span>
+                        <h3>Fase 2</h3>
+                        <p>Nuestros primeros 3 meses de novios.</p>
+                    </a>
+                    <a class="page-card" href="fase-3.html">
+                        <span class="page-number">Pagina 4</span>
+                        <h3>Fase 3</h3>
+                        <p>Mejores momentos juntos en formato de notas tiernas.</p>
+                    </a>
+                    <a class="page-card" href="fase-4.html">
+                        <span class="page-number">Pagina 5</span>
+                        <h3>Fase 4</h3>
+                        <p>50 cosas que amo de ti en notas individuales.</p>
+                    </a>
+                    <a class="page-card" href="fase-5.html">
+                        <span class="page-number">Pagina 6</span>
+                        <h3>Fase 5</h3>
+                        <p>Nuestro futuro juntos y todo lo que soñamos construir.</p>
+                    </a>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2>Entrada bonita</h2>
+                <div class="memory-grid">
+                    <figure class="memory">
+                        <img src="imagenes/star-03.jpeg" alt="Foto divertida de ustedes">
+                        <figcaption>Este sitio esta pensado para que se sienta como un album digital muy cute de ustedes.</figcaption>
+                    </figure>
+                    <figure class="memory">
+                        <img src="imagenes/star-08.jpeg" alt="Foto tierna de ustedes dos">
+                        <figcaption>Toda la estetica ahora sigue la misma idea: rosa pastel, corazoncitos y tulipanes kawaii.</figcaption>
+                    </figure>
+                    <figure class="memory">
+                        <img src="imagenes/star-09.jpeg" alt="Otra foto bonita de ustedes dos">
+                        <figcaption>Cada fase tiene espacio para que sigas editando tus notas y personalizando todo.</figcaption>
+                    </figure>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>

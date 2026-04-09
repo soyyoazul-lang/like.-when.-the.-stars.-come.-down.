@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fase 5 | Nuestro futuro juntos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root { --pink-1:#fff4f8; --pink-2:#ffe3ee; --pink-3:#ffcadd; --pink-4:#f6a9c1; --pink-5:#e77fa5; --text:#7b4a63; --muted:#9a6b81; --card:rgba(255,250,252,.9); --line:rgba(231,127,165,.2); --shadow:0 18px 40px rgba(231,127,165,.15); }
+        * { box-sizing:border-box; }
+        body { margin:0; font-family:"Nunito",sans-serif; color:var(--text); background:radial-gradient(circle at top right, rgba(255,186,214,.4), transparent 28%), linear-gradient(180deg,#fff2f8 0%,#ffdbe9 100%); }
+        .star-collage { position:fixed; inset:0; z-index:0; pointer-events:none; overflow:hidden; }
+        .star-photo { position:absolute; background-size:cover; background-position:center; clip-path:polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 92%, 50% 70%, 21% 92%, 32% 57%, 2% 35%, 39% 35%); opacity:.22; filter:saturate(1.05) brightness(1.04); }
+        .star-1 { width:220px; height:220px; top:7%; left:-2%; transform:rotate(-8deg); background-image:url("foto-real-4.jpeg"); }
+        .star-2 { width:270px; height:270px; top:14%; right:-3%; transform:rotate(9deg); background-image:url("foto-real-3.jpeg"); }
+        .star-3 { width:230px; height:230px; top:74%; right:8%; transform:rotate(-9deg); background-image:url("foto-real-1.jpeg"); }
+        body::before { content:"🌷💗✨"; position:fixed; right:18px; top:18px; opacity:.12; font-size:2.4rem; pointer-events:none; }
+        .page { width:min(1100px,calc(100% - 28px)); margin:0 auto; padding:24px 0 52px; position:relative; z-index:1; }
+        .topbar,.hero,.dream { background:var(--card); border:2px solid var(--line); box-shadow:var(--shadow); }
+        .topbar { border-radius:999px; padding:14px 18px; display:flex; justify-content:space-between; align-items:center; gap:16px; margin-bottom:22px; }
+        .nav { display:flex; flex-wrap:wrap; gap:10px; }
+        .nav a,.button { text-decoration:none; color:var(--text); background:#fff8fb; border:2px solid var(--line); padding:10px 14px; border-radius:999px; font-weight:800; }
+        .hero { border-radius:34px; padding:24px; margin-bottom:22px; }
+        h1,h2 { margin:0; font-family:"Cherry Bomb One",system-ui; font-weight:400; color:#d05f8f; }
+        h1 { font-size:clamp(2.8rem,7vw,4.8rem); line-height:1.02; margin:16px 0; }
+        h2 { font-size:1.6rem; }
+        p { color:var(--muted); line-height:1.8; }
+        .badge { display:inline-block; padding:8px 14px; border-radius:999px; background:rgba(246,169,193,.18); font-weight:800; font-size:.84rem; }
+        .dream-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:16px; margin-bottom:22px; }
+        .dream { border-radius:30px; padding:22px; position:relative; overflow:hidden; }
+        .dream::after { content:"🌷"; position:absolute; right:14px; bottom:10px; font-size:2rem; opacity:.16; }
+        .edit { display:inline-block; margin-bottom:10px; padding:6px 12px; border-radius:999px; background:rgba(255,202,221,.28); font-size:.82rem; font-weight:800; }
+        .actions { display:flex; flex-wrap:wrap; gap:10px; }
+        .button.primary { background:linear-gradient(180deg,#f5a6c6 0%,#e77fa5 100%); color:white; border-color:transparent; }
+        @media (max-width:860px) { .dream-grid { grid-template-columns:1fr; } }
+        @media (max-width:640px) { .topbar { display:block; border-radius:28px; } .nav { margin-top:12px; } }
+    </style>
+</head>
+<body>
+    <div class="star-collage" aria-hidden="true"><div class="star-photo star-1"></div><div class="star-photo star-2"></div><div class="star-photo star-3"></div></div>
+    <div class="page">
+        <header class="topbar">
+            <strong>Fase 5 ✨</strong>
+            <nav class="nav">
+                <a href="index.html">Introduccion</a>
+                <a href="desarrollo.html">Desarrollo</a>
+                <a href="fase-2.html">Fase 2</a>
+                <a href="fase-3.html">Fase 3</a>
+                <a href="fase-4.html">Fase 4</a>
+                <a href="fase-5.html">Fase 5</a>
+            </nav>
+        </header>
+
+        <main>
+            <section class="hero">
+                <span class="badge">Nuestro futuro juntos</span>
+                <h1>Todo lo bonito que aun nos falta vivir.</h1>
+                <p>Esta ultima fase esta pensada para hablar de sueños, deseos, planes lindos y todo lo que te imaginas construyendo a su lado. Tambien te deje apartados editables para que los llenes a tu manera.</p>
+            </section>
+
+            <section class="dream-grid">
+                <article class="dream">
+                    <span class="edit">Apartado editable 1</span>
+                    <h2>Lo que sueño vivir contigo</h2>
+                    <p>[Escribe aqui algunas experiencias, viajes, dias o escenas que sueñas vivir a su lado.]</p>
+                </article>
+                <article class="dream">
+                    <span class="edit">Apartado editable 2</span>
+                    <h2>Como imagino nuestra relacion mas adelante</h2>
+                    <p>[Escribe aqui como te imaginas creciendo juntos, apoyandose y construyendo un futuro bonito.]</p>
+                </article>
+                <article class="dream">
+                    <span class="edit">Apartado editable 3</span>
+                    <h2>Las promesas bonitas que me gustaria cumplir contigo</h2>
+                    <p>[Escribe aqui promesas, deseos o cositas que te gustaria darle y vivir con el tiempo.]</p>
+                </article>
+                <article class="dream">
+                    <span class="edit">Apartado editable 4</span>
+                    <h2>Un cierre tierno para toda nuestra fan page</h2>
+                    <p>[Escribe aqui un mensaje final sobre lo mucho que amas su historia y lo feliz que te hace pensar en el futuro juntos.]</p>
+                </article>
+            </section>
+
+            <div class="actions">
+                <a class="button" href="fase-4.html">Volver a fase 4</a>
+                <a class="button primary" href="index.html">Regresar al inicio</a>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
